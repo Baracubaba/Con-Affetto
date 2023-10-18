@@ -18,7 +18,7 @@ jobs:
       run: |
         git config user.email "Luiz-AVcruz@baracubaba.com.br"
         git config user.name "Luiz Augusto Vitorino Cruz"
-        git remote add azure https://Luiz_Augusto_Vitorino_Cruz@dev.azure.com/Baracubaba/_git/Con-Affetto
+        git remote add azure https://Baracubaba@dev.azure.com/Baracubaba/Con-Affetto/_git/Con-Affetto
         git push azure HEAD:refs/heads/${{ github.ref_name }}
         git push azure --tags
       env:
