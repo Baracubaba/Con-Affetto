@@ -19,8 +19,7 @@ jobs:
         git config user.email "Luiz-AVcruz@baracubaba.com.br"
         git config user.name "Luiz Augusto Vitorino Cruz"
         git remote add azure https://Baracubaba:${{ secrets.AZURE_DEVOPS_PAT }}@dev.azure.com/Baracubaba/Con-Affetto/_git/Con-Affetto
-        git pull --rebase azure main  # Rebase
-        git push azure HEAD:refs/heads/main
+        git push azure HEAD:refs/heads/main --force  # Força o push
         git push azure --tags
       env:
         AZURE_DEVOPS_PAT: ${{ secrets.AZURE_DEVOPS_PAT }}
