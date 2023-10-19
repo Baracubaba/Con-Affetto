@@ -13,6 +13,8 @@ jobs:
     steps:
     - name: Checkout GitHub repository
       uses: actions/checkout@v2
+      with:
+        fetch-depth: 0  # Faz um clone "deep" do repositório
 
     - name: Push to Azure DevOps
       run: |
@@ -23,4 +25,3 @@ jobs:
         git push azure --tags
       env:
         AZURE_DEVOPS_PAT: ${{ secrets.AZURE_DEVOPS_PAT }}
-
